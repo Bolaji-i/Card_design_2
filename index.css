@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+
+  --props-color: hsl(277, 64%, 61%);
+  --mainHead_stats-color: hsl(0, 0%, 100%);
+  --mainPara-color: hsla(0, 0%, 100%, 0.75);
+  --statHead-color: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: "Inter";
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-background);
+}
+.card-wrap {
+  max-width: 950px;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: var(--card-background);
+}
+.card-wrap div {
+  flex-grow: 1;
+  flex-basis: 10%;
+}
+.card-content {
+  padding-left: 4rem;
+  padding-right: 7rem;
+  padding-top: 3rem;
+}
+
+.card-title {
+  font-size: 32px;
+  color: var(--mainHead_stats-color);
+  font-family: "Inter", sans-serif;
+  margin-bottom: 20px;
+}
+#insights {
+  color: var(--props-color);
+}
+.card-content p {
+  color: var(--mainPara-color);
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+.stats-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats {
+  text-transform: uppercase;
+}
+.comp h3 {
+  text-transform: none;
+}
+
+.stats h3 {
+  font-size: 20px;
+  margin-top: 40px;
+  color: var(--mainHead_stats-color);
+  font-family: "Lexend Deca", sans-serif;
+}
+.stats .stat-p {
+  font-size: 10px;
+}
+
+#img-mobile {
+  display: none;
+}
+#img-desktop {
+  height: 100%;
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#image {
+  position: relative;
+  background-color: var(--props-color);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.attribution {
+  background-color: var(--mainHead_stats-color);
+  height: 60px;
+  width: max-content;
+  margin: auto;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  main {
+    height: 140vh;
+  }
+
+  .container {
+    height: auto;
+    justify-content: center;
+  }
+
+  .card-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 70%;
+    margin: auto;
+  }
+
+  #img-desktop {
+    display: none;
+  }
+
+  #image {
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .attribution {
+    background-color: var(--mainHead_stats-color);
+    height: 80px;
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+  }
+  #img-mobile {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    mix-blend-mode: multiply;
+    filter: grayscale(45%), opacity(1.3);
+  }
+
+  #props {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .card-content {
+    padding: 10%;
+  }
+
+  .card-content h1, 
+  p {
+    text-align: center;
+  }
+
+  .stats-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stats h3,
+  p {
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    height: 140vh;
+  }
+
+  .container {
+    width: max-content;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #img-desktop {
+    display: none;
+  }
+
+  #img-mobile {
+    display: flex;
+    max-width: 100%;
+    mix-blend-mode: multiply;
+    border-top-left-radius: 15px;
+  }
+
+  .image {
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+  }
+
+  #props {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+  }
+
+  .card-wrap {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .card-content {
+    padding: 10%;
+  }
+
+  .card-content h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.5px;
+    font-family: "Lexend Deca", sans-serif;;
+  }
+
+  .stats-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .stats h3 {
+    font-size: 25px;
+  }
+
+  .stats p {
+    font-size: 15px;
+  }
+}
